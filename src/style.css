@@ -1,0 +1,38 @@
+body {
+    background-color: #2e2e2e;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00ff00;
+    color: #2e2e2e;
+    height: 100px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #0a2400;
+    color: green;
+    height: 80px;
+}
+
+#todoMenu{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu{
+     border-style: solid;
+     padding: 10px;
+     margin: auto;
+     align-items: flex-end;
+     
+}
+
+ul{
+    list-style-type: none;
+}
