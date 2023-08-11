@@ -1,12 +1,15 @@
 body {
-    background-color: #2e2e2e;
+    background-color: #122C43;
+    background-image: url('r&m/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
-
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00ff00;
+    background: #F7E62B;
     color: #2e2e2e;
     height: 100px;
 }
@@ -27,6 +30,7 @@ footer{
 
 .menu{
      border-style: solid;
+     background: #F7911D;
      padding: 10px;
      margin: auto;
      align-items: flex-end;
