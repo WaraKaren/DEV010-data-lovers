@@ -22,21 +22,60 @@ footer{
     height: 80px;
 }
 
-#todoMenu{
+#todoMenu {
+    list-style: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
-}
-
-.menu{
-     border-style: solid;
-     background: #F7911D;
-     padding: 10px;
-     margin: auto;
-     align-items: flex-end;
-     
-}
-
-ul{
+    align-content: space-between;
+  }
+  
+  .menu {
+    font-weight: bold;
+    margin-right: 20px;
+    position: relative;
+    background: #F7911D;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ee5214;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu:hover .submenu {
+    display: block;
+  }
+  
+  .subsubmenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #BE2D39;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .submenu li:hover .subsubmenu {
+    display: block;
+  }
+  
+  .submenu li {
+    position: relative;
+  }
+  
+  .submenu li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Eliminar los puntos de la lista */
+  #todoMenu, .submenu, .subsubmenu {
+    padding-left: 0;
     list-style-type: none;
+  }
+  
+*{
+    font-family: 'Orbitron', sans-serif;
 }
