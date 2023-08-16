@@ -15,64 +15,73 @@
     <h1>El portal de los personajes de Rick y Morty</h1>
   </header>
   <nav>
-    <ul id="todoMenu">
-      <li class="menu">PERSONAJE
-        <ul class="submenu">
-          <li>PRINCIPALES
-            <ul class="subsubmenu">
-              <li>RICK</li>
-              <li>MORTY</li>
-              <li>SUMMER</li>
-              <li>BETH</li>
-              <li>JERRY</li>
-            </ul>
-          </li>
-          <li>GENERO
-            <ul class="subsubmenu">
-              <li>FEMENINO</li>
-              <li>MASCULINO</li>
-              <li>OTRO</li>
-            </ul>
-          </li>
-          <li>ESPECIE
-            <ul class="subsubmenu">
-              <li>HUMANO</li>
-              <li>ALIEN</li>
-              <li>OTRO</li>
-            </ul>
-          </li>
-          <li>ESTADO
-            <ul class="subsubmenu">
-              <li>VIVO</li>
-              <li>MUERTO</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="menu">TEMPORADA
-        <ul class="submenu">
-          <li>TEM 1</li>
-          <li>TEM 2</li>
-          <li>TEM 3</li>
-          <li>TEM 4</li>
-          <li>TEM 5</li>
-          <li>TEM 6</li>
-        </ul>
-      </li>
-      <li class="menu">UBICACION
-        <ul class="submenu">
-          <li>TIERRA</li>
-          <li>OTRO PLANETA</li>
-        </ul>
-      </li>
-      <li class="menu">OTROS
-        <ul class="submenu">
-          <li>CONSEJO DE LOS RICKS</li>
-          <li>DIMENCION C-137</li>
-        </ul>
-      </li>
-    </ul>
+    <label for="personajes">Personajes:</label>
+    <select id="personajes" required>
+      <option disabled selected value="">Seleccione una opción</option>
+      <optgroup label="PRINCIPALES">
+        <option value="rick">RICK</option>
+        <option value="morty">MORTY</option>
+        <option value="summer">SUMMER</option>
+        <option value="beth">BETH</option>
+        <option value="jerry">JERRY</option>
+      </optgroup>
+      <optgroup label="GENERO">
+        <option value="femenino">FEMENINO</option>
+        <option value="masculino">MASCULINO</option>
+        <option value="otro_genero">OTRO</option>
+      </optgroup>
+      <optgroup label="ESPECIE">
+        <option value="humano">HUMANO</option>
+        <option value="alien">ALIEN</option>
+        <option value="otra_especie">OTRO</option>
+      </optgroup>
+      <optgroup label="ESTADO">
+        <option value="vivo">VIVO</option>
+        <option value="muerto">MUERTO</option>
+      </optgroup>
+    </select>
+  
+    <br>
+  
+    <label for="temporadas">Temporadas:</label>
+    <select id="temporadas" required>
+      <option disabled selected value="">Seleccione una opción</option>
+      <option value="tem1">TEM 1</option>
+      <option value="tem2">TEM 2</option>
+      <option value="tem3">TEM 3</option>
+      <option value="tem4">TEM 4</option>
+      <option value="tem5">TEM 5</option>
+      <option value="tem6">TEM 6</option>
+    </select>
+  
+    <br>
+  
+    <label for="ubicacion">Ubicación:</label>
+    <select id="ubicacion" required>
+      <option disabled selected value="">Seleccione una opción</option>
+      <option value="tierra">TIERRA</option>
+      <option value="otro_planeta">OTRO PLANETA</option>
+    </select>
+  
+    <br>
+  
+    <label for="otros">Otros:</label>
+    <select id="otros" required>
+      <option disabled selected value="">Seleccione una opción</option>
+      <option value="consejo_ricks">CONSEJO DE LOS RICKS</option>
+      <option value="dimension_c137">DIMENSION C-137</option>
+    </select>
   </nav>
+  
+  <!-- efecto de carta -->
+  <div class="container">
+    <div class="card">
+      <div class="imgBox">
+        <img> <!-- introducir imagen -->
+      </div>
+      <h>nombre del personaje</h2>
+    </div>
+  </div>
   <footer>
     <h3>WARA , Maria jose </h3>
   </footer>
