@@ -114,6 +114,68 @@ footer {
   width: 100%;
 }
 
+<<<<<<< HEAD
+#todoMenu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-content: space-between;
+    
+  }
+  
+  .menu {
+    font-weight: bold;
+    margin-right: 20px;
+    position:sticky;
+    background: #F7911D;
+    
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #e6bfaf;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu:hover .submenu {
+    display: block;
+  }
+  
+  .subsubmenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #BE2D39;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .submenu li:hover .subsubmenu {
+    display: block;
+  }
+  
+  .submenu li {
+    position: relative;
+  }
+  
+  .submenu li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Eliminar los puntos de la lista */
+  #todoMenu, .submenu, .subsubmenu {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+=======
 * {
   font-family: 'Orbitron', sans-serif;
 }
+>>>>>>> fd09380629e03befb5f1617e86aa72af483e23e5

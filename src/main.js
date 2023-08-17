@@ -8,7 +8,7 @@ import { example } from './data.js';
 //import data from './data/pokemon/pokemon.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(data.results);
+console.log(data.results); //de aqui sacamos los personajes
 const cartasrm = document.getElementById('cartasrm');
 cartasrm.innerHTML=(data.results[0].name);
 console.log(document.getElementById('cartasrm'));
