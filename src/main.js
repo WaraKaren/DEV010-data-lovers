@@ -8,15 +8,47 @@ import { example } from './data.js';
 //import data from './data/pokemon/pokemon.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(data.results); //de aqui sacamos los personajes
+/* console.log(data.results); // de aquí sacamos los personajes
 const cartasrm = document.getElementById('cartasrm');
-cartasrm.innerHTML=(data.results[0].name);
+cartasrm.innerHTML = data.results[0].name;
+console.log(document.getElementById('cartasrm')); */
+
+const container = document.querySelector('.container');
+for (let i = 0; i < data.results.length; i++) {
+  console.log(data.results[i]);
+
+  container.innerHTML += /* `<p>${data.results[i].name}</p>`  */
+   `<figure>
+        <img src="${data.results[i].image}" alt="${data.results[i].name}">
+        <h4>${data.results[i].name}</h4>
+    </figure>`;
+ 
+  
+}
+/* console.log(data.results); //de aqui sacamos los personajes
+const cartasrm = document.getElementById('cartasrm');
+cartasrm.innerHTML = (data.results[0].name);
 console.log(document.getElementById('cartasrm'));
+for (let i = 0; i < data.results.length; i++) {
+    console.log(data.results[i]);
+    
+    container.innerHTML += `<figure>
+    <img
+    src=" ${data.results[i].poster}"
+    alt= "${data.results[i].title}"
+    <figcaption>${data.results[i].title} <figcaption>
+    </figure>`
+} */
+
+
+
+
+
 
 /* console.log(example, data);
 
 const prueba = document.querySelector('.container')
-for(let i=0 ; i< data.info.length; i++){
+
   console.log(data.info[i]);
   prueba.innerHTML += `<figure>
   <img src="${data.info[i].image}"
@@ -58,4 +90,4 @@ for (let i = 0; i < data.films.length; i++) {
   // Llamar a la función printdata() después de que el DOM esté cargado
   printdata(data.films);
 }); */
-  
+
