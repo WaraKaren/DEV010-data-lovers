@@ -8,7 +8,12 @@ import { example } from './data.js';
 //import data from './data/pokemon/pokemon.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+console.log(data.results);
+const cartasrm = document.getElementById('cartasrm');
+cartasrm.innerHTML=(data.results[0].name);
+console.log(document.getElementById('cartasrm'));
+
+/* console.log(example, data);
 
 const prueba = document.querySelector('.container')
 for(let i=0 ; i< data.info.length; i++){
@@ -18,7 +23,7 @@ for(let i=0 ; i< data.info.length; i++){
     alt="personaje de rick and morty"> <!-- introducir imagen -->
 </figure>
 </div>`
-}
+} */
 
 
 /* const searchTitle = 'rick and morty';
