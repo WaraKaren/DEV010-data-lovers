@@ -27,13 +27,15 @@ footer{
     padding: 0;
     display: flex;
     align-content: space-between;
+    
   }
   
   .menu {
     font-weight: bold;
     margin-right: 20px;
-    position: relative;
+    position:sticky;
     background: #F7911D;
+    
   }
   
   .submenu {
@@ -41,7 +43,7 @@ footer{
     position: absolute;
     top: 100%;
     left: 0;
-    background: #ee5214;
+    background: #e6bfaf;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
   
