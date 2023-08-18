@@ -1,5 +1,5 @@
 body {
-    background-color: #122C43;
+    background-color: #0a0a0a;
     background-image: url('r&m/fondo.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -11,22 +11,42 @@ header {
     justify-content: center;
     align-items: center;
     background: #F7E62B;
-    color: #2e2e2e;
+    color: #0f0f0f;
     height: 100px;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
-    background-color: #0a2400;
-    color: green;
+    background-color: #275a13;
+    color: rgb(42, 216, 42);
     height: 80px;
 }
 
 
 
-*{
+* {
     font-family: 'Orbitron', sans-serif;
-}
-¨
 
+}
+
+.container {
+
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; /* Espacio entre elementos */
+    text-align: center; /* centrar contenido horizontalmente */
+  }
+
+  label {
+    text-align: right;
+    padding-right: 10px; 
+  }
+  nav {
+    display: flex;
+    flex-direction:row; /* Alinear elementos  */
+    align-items: center; /* Centrar horizontalmente el contenido */
+    gap: 10px; /* Espacio entre elementos */
+    margin-top: 20px; /* Margen superior */
+  }
