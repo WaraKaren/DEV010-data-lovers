@@ -18,12 +18,24 @@ for (let i = 0; i < data.results.length; i++) {
   console.log(data.results[i]);
 
   container.innerHTML += /* `<p>${data.results[i].name}</p>`  */
-   `<figure>
-        <img src="${data.results[i].image}" alt="${data.results[i].name}">
-        <h4>${data.results[i].name}</h4>
-    </figure>`;
- 
-  
+   `<div class="card">
+    <div class="imgBox">
+        <img src="${data.results[i].image}"
+          alt="${data.results[i].name}">
+    </div>
+    <div class="content">
+    <h2>${data.results[i].name}</h2>
+      <p>
+      ${data.results[i].status}
+      ${data.results[i].species}
+      ${data.results[i].type}
+      ${data.results[i].gender}
+      ${data.results[i].origin}
+      ${data.results[i].location}
+      ${data.results[i].episode}
+      </p>
+    </div>
+  </div>`
 }
 /* console.log(data.results); //de aqui sacamos los personajes
 const cartasrm = document.getElementById('cartasrm');
@@ -48,7 +60,7 @@ for (let i = 0; i < data.results.length; i++) {
 /* console.log(example, data);
 
 const prueba = document.querySelector('.container')
-
+for(let i=0 ; i< data.info.length; i++){
   console.log(data.info[i]);
   prueba.innerHTML += `<figure>
   <img src="${data.info[i].image}"
