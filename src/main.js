@@ -13,11 +13,11 @@ const cartasrm = document.getElementById('cartasrm');
 cartasrm.innerHTML = data.results[0].name;
 console.log(document.getElementById('cartasrm')); */
 
-const container = document.querySelector('.container');
+/* const container = document.querySelector('.container');
 for (let i = 0; i < data.results.length; i++) {
-  console.log(data.results[i]);
+  //console.log(data.results[i]);
 
-  container.innerHTML += /* `<p>${data.results[i].name}</p>`  */
+  container.innerHTML +=
    `<div class="card">
     <div class="imgBox">
         <img src="${data.results[i].image}"
@@ -36,70 +36,163 @@ for (let i = 0; i < data.results.length; i++) {
       </p>
     </div>
   </div>`
-}
-/* console.log(data.results); //de aqui sacamos los personajes
-const cartasrm = document.getElementById('cartasrm');
-cartasrm.innerHTML = (data.results[0].name);
-console.log(document.getElementById('cartasrm'));
+} */
+
+/* const container = document.querySelector('.container');
+
 for (let i = 0; i < data.results.length; i++) {
-    console.log(data.results[i]);
-    
-    container.innerHTML += `<figure>
-    <img
-    src=" ${data.results[i].poster}"
-    alt= "${data.results[i].title}"
-    <figcaption>${data.results[i].title} <figcaption>
-    </figure>`
+  const character = data.results[i];
+  // const originName = character.origin.name;
+
+  container.innerHTML +=
+    `<div class="card">
+      <div class="imgBox">
+        <img src="${character.image}" alt="${character.name}">
+      </div>
+      <div class="content">
+        <h2>${character.name}</h2>
+        <p>
+          Status: ${character.status}<br>
+          Species: ${character.species}<br>
+          Type: ${character.type}<br>
+          Gender: ${character.gender}<br>
+          Origin: ${character.origin.name}<br>
+          Location: ${character.location.name}<br>
+          Episodes: ${character.episode.length}<br>
+        </p>
+      </div>
+    </div>`;
 } */
 
+const ricks = document.querySelector('.container');
 
+data.results.forEach(character => {
+  if (character.name.includes("Rick")) {
 
-
-
-
-/* console.log(example, data);
-
-const prueba = document.querySelector('.container')
-for(let i=0 ; i< data.info.length; i++){
-  console.log(data.info[i]);
-  prueba.innerHTML += `<figure>
-  <img src="${data.info[i].image}"
-    alt="personaje de rick and morty"> <!-- introducir imagen -->
-</figure>
-</div>`
-} */
-
-
-/* const searchTitle = 'rick and morty';
-const foundFilm = data.films.find((film) => film.title === searchTitle);
-const container = document.querySelector('todomenu')
-for (let i = 0; i < data.films.length; i++) {
-    console.log(data.films[i]);
-    container.innerHTML += `<figure>
-    <img
-    src=" ${data.films[i].poster}"
-    alt= "${data.films[i].title}"
-    <figcaption>${data.films[i].title} <figcaption>
-    </figure>` */
-
-/* document.addEventListener('DOMContentLoaded', function () {
-  function printdata(array) {
-    const container = document.querySelector('.movie-grid');
-    let html = ''; // Variable para almacenar el HTML
-  
-    for (let i = 0; i < array.length; i++) {
-      html += ` <figure>
-          <img
-            src="${array[i].poster}"
-            alt="${array[i].title}"
-          />
-          <figcaption>${array[i].title}</figcaption>
-        </figure>`;
-    }
-    container.innerHTML = html; // Agregar el HTML al contenedor
+    ricks.innerHTML +=
+      `<div class="card">
+        <div class="imgBox">
+          <img src="${character.image}" alt="${character.name}">
+        </div>
+        <div class="content">
+          <h2>${character.name}</h2>
+          <p>
+            Status: ${character.status}<br>
+            Species: ${character.species}<br>
+            Type: ${character.type}<br>
+            Gender: ${character.gender}<br>
+            Origin: ${character.origin.name}<br>
+            Location: ${character.location.name}<br>
+            Episodes: ${character.episode.length}<br>
+          </p>
+        </div>
+      </div>`;
   }
-  
-  // Llamar a la función printdata() después de que el DOM esté cargado
-  printdata(data.films);
-}); */
+});
 
+const mortys = document.querySelector('.container');
+
+data.results.forEach(character => {
+  if (character.name.includes("Morty")) {
+
+    mortys.innerHTML +=
+      `<div class="card">
+        <div class="imgBox">
+          <img src="${character.image}" alt="${character.name}">
+        </div>
+        <div class="content">
+          <h2>${character.name}</h2>
+          <p>
+            Status: ${character.status}<br>
+            Species: ${character.species}<br>
+            Type: ${character.type}<br>
+            Gender: ${character.gender}<br>
+            Origin: ${character.origin.name}<br>
+            Location: ${character.location.name}<br>
+            Episodes: ${character.episode.length}<br>
+          </p>
+        </div>
+      </div>`;
+  }
+});
+
+const summer = document.querySelector('.container');
+
+data.results.forEach(character => {
+  if (character.name.includes("Summer")) {
+    const originName = character.origin.name;
+
+    summer.innerHTML +=
+      `<div class="card">
+        <div class="imgBox">
+          <img src="${character.image}" alt="${character.name}">
+        </div>
+        <div class="content">
+          <h2>${character.name}</h2>
+          <p>
+            Status: ${character.status}<br>
+            Species: ${character.species}<br>
+            Type: ${character.type}<br>
+            Gender: ${character.gender}<br>
+            Origin: ${originName}<br>
+            Location: ${character.location.name}<br>
+            Episodes: ${character.episode.length}<br>
+          </p>
+        </div>
+      </div>`;
+  }
+});
+
+const beth = document.querySelector('.container');
+
+data.results.forEach(character => {
+  if (character.name.includes("Beth")) {
+    const originName = character.origin.name;
+
+    beth.innerHTML +=
+      `<div class="card">
+        <div class="imgBox">
+          <img src="${character.image}" alt="${character.name}">
+        </div>
+        <div class="content">
+          <h2>${character.name}</h2>
+          <p>
+            Status: ${character.status}<br>
+            Species: ${character.species}<br>
+            Type: ${character.type}<br>
+            Gender: ${character.gender}<br>
+            Origin: ${originName}<br>
+            Location: ${character.location.name}<br>
+            Episodes: ${character.episode.length}<br>
+          </p>
+        </div>
+      </div>`;
+  }
+});
+
+const jerrys = document.querySelector('.container');
+
+data.results.forEach(character => {
+  if (character.name.includes("Jerry")) {
+    const originName = character.origin.name;
+
+    jerrys.innerHTML +=
+      `<div class="card">
+        <div class="imgBox">
+          <img src="${character.image}" alt="${character.name}">
+        </div>
+        <div class="content">
+          <h2>${character.name}</h2>
+          <p>
+            Status: ${character.status}<br>
+            Species: ${character.species}<br>
+            Type: ${character.type}<br>
+            Gender: ${character.gender}<br>
+            Origin: ${originName}<br>
+            Location: ${character.location.name}<br>
+            Episodes: ${character.episode.length}<br>
+          </p>
+        </div>
+      </div>`;
+  }
+});
