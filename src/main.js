@@ -66,133 +66,30 @@ for (let i = 0; i < data.results.length; i++) {
 
 const ricks = document.querySelector('.container');
 
-data.results.forEach(character => {
-  if (character.name.includes("Rick")) {
+const rickCards = data.results
+  .filter(function(character) {
+    return character.name.includes("Rick");
+  })
+  .map(function(character) {
+    return `<div class="card">
+              <div class="imgBox">
+                <img src="${character.image}" alt="${character.name}">
+              </div>
+              <div class="content">
+                <h2>${character.name}</h2>
+                <p>
+                  Status: ${character.status}<br>
+                  Species: ${character.species}<br>
+                  Type: ${character.type}<br>
+                  Gender: ${character.gender}<br>
+                  Origin: ${character.origin.name}<br>
+                  Location: ${character.location.name}<br>
+                  Episodes: ${character.episode.length}<br>
+                </p>
+              </div>
+            </div>`;
+  })
+  .join(""); //para unir las cadenas
 
-    ricks.innerHTML +=
-      `<div class="card">
-        <div class="imgBox">
-          <img src="${character.image}" alt="${character.name}">
-        </div>
-        <div class="content">
-          <h2>${character.name}</h2>
-          <p>
-            Status: ${character.status}<br>
-            Species: ${character.species}<br>
-            Type: ${character.type}<br>
-            Gender: ${character.gender}<br>
-            Origin: ${character.origin.name}<br>
-            Location: ${character.location.name}<br>
-            Episodes: ${character.episode.length}<br>
-          </p>
-        </div>
-      </div>`;
-  }
-});
+ricks.innerHTML = rickCards;
 
-const mortys = document.querySelector('.container');
-
-data.results.forEach(character => {
-  if (character.name.includes("Morty")) {
-
-    mortys.innerHTML +=
-      `<div class="card">
-        <div class="imgBox">
-          <img src="${character.image}" alt="${character.name}">
-        </div>
-        <div class="content">
-          <h2>${character.name}</h2>
-          <p>
-            Status: ${character.status}<br>
-            Species: ${character.species}<br>
-            Type: ${character.type}<br>
-            Gender: ${character.gender}<br>
-            Origin: ${character.origin.name}<br>
-            Location: ${character.location.name}<br>
-            Episodes: ${character.episode.length}<br>
-          </p>
-        </div>
-      </div>`;
-  }
-});
-
-const summer = document.querySelector('.container');
-
-data.results.forEach(character => {
-  if (character.name.includes("Summer")) {
-    const originName = character.origin.name;
-
-    summer.innerHTML +=
-      `<div class="card">
-        <div class="imgBox">
-          <img src="${character.image}" alt="${character.name}">
-        </div>
-        <div class="content">
-          <h2>${character.name}</h2>
-          <p>
-            Status: ${character.status}<br>
-            Species: ${character.species}<br>
-            Type: ${character.type}<br>
-            Gender: ${character.gender}<br>
-            Origin: ${originName}<br>
-            Location: ${character.location.name}<br>
-            Episodes: ${character.episode.length}<br>
-          </p>
-        </div>
-      </div>`;
-  }
-});
-
-const beth = document.querySelector('.container');
-
-data.results.forEach(character => {
-  if (character.name.includes("Beth")) {
-    const originName = character.origin.name;
-
-    beth.innerHTML +=
-      `<div class="card">
-        <div class="imgBox">
-          <img src="${character.image}" alt="${character.name}">
-        </div>
-        <div class="content">
-          <h2>${character.name}</h2>
-          <p>
-            Status: ${character.status}<br>
-            Species: ${character.species}<br>
-            Type: ${character.type}<br>
-            Gender: ${character.gender}<br>
-            Origin: ${originName}<br>
-            Location: ${character.location.name}<br>
-            Episodes: ${character.episode.length}<br>
-          </p>
-        </div>
-      </div>`;
-  }
-});
-
-const jerrys = document.querySelector('.container');
-
-data.results.forEach(character => {
-  if (character.name.includes("Jerry")) {
-    const originName = character.origin.name;
-
-    jerrys.innerHTML +=
-      `<div class="card">
-        <div class="imgBox">
-          <img src="${character.image}" alt="${character.name}">
-        </div>
-        <div class="content">
-          <h2>${character.name}</h2>
-          <p>
-            Status: ${character.status}<br>
-            Species: ${character.species}<br>
-            Type: ${character.type}<br>
-            Gender: ${character.gender}<br>
-            Origin: ${originName}<br>
-            Location: ${character.location.name}<br>
-            Episodes: ${character.episode.length}<br>
-          </p>
-        </div>
-      </div>`;
-  }
-});
