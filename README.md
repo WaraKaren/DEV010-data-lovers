@@ -4,10 +4,8 @@
 
 * [1. Descripción](#descripción)
 * [2. Proceso de Diseño](#proceso-de-diseño)
-* [3. Investigación de Usuarios](#3-objetivos-de-aprendizaje)
-* [4. Historias de Usuario](#4-consideraciones-generales)
-* [5. Prototipo de Baja Fidelidad](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Instalación y Uso](#6-hacker-edition)
+* [3. Prototipo](#Prototipo)
+* [4. Instalación y Uso](#Instalación-y-Uso)
 
 ***
 
@@ -47,12 +45,14 @@ La investigacion se enfoco en los fanáticos de Rick and Morty, para asi brindar
 ## Prototipo
 En el repositorio, puedes encontrar fotos de los bocetos y prototipos de baja fidelidad utilizados durante el proceso de diseño. Estos bocetos ayudaron a definir la estructura y la apariencia de la página web.
 * ### Baja calidad
+![Prototipo Baja calidad](imgReadme\prototipoBaja.jpg)
 * ### Alta calidad
-
+![Prototipo Inicial (PC - DISPOSITIVO MOVIL)](imgReadme\prototivoAlta.jpg)
 ***
 ## Instalación y Uso
+![Prototipo actual](imgReadme\inicioPc.gif)
+
 Para utilizar Rick and Morty Character Portal, sigue estos pasos:
 
-
-Ingresa en tu navegador web de tu preferencia y dirigete a el [enlace la de pagina](https://warakaren.github.io/WKdata-lovers/src/),
+Para acceder no necesitas descargar algun archivo solo tienes que ingresar en tu navegador web de tu preferencia y dirigete a el [enlace la de pagina](https://warakaren.github.io/WKdata-lovers/src/),
 Utiliza las opciones de búsqueda, ordenamiento por alfabeto, filtrado por personaje y el botón de para obtener una tarjeta aleatoria para explorar los personajes de Rick and Morty.
