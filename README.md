@@ -45,12 +45,12 @@ La investigacion se enfoco en los fanáticos de Rick and Morty, para asi brindar
 ## Prototipo
 En el repositorio, puedes encontrar fotos de los bocetos y prototipos de baja fidelidad utilizados durante el proceso de diseño. Estos bocetos ayudaron a definir la estructura y la apariencia de la página web.
 * ### Baja calidad
-![Prototipo Baja calidad](imgReadme\prototipoBaja.jpg)
+![Prototipo Baja calidad](imgReadme/prototipoBaja.jpg)
 * ### Alta calidad
-![Prototipo Inicial (PC - DISPOSITIVO MOVIL)](imgReadme\prototivoAlta.jpg)
+![Prototipo Inicial (PC - DISPOSITIVO MOVIL)](imgReadme/prototivoAlta.jpg)
 ***
 ## Instalación y Uso
-![Prototipo actual](imgReadme\inicioPc.gif)
+![Prototipo actual](imgReadme/inicioPc.gif)
 
 Para utilizar Rick and Morty Character Portal, sigue estos pasos:
 
