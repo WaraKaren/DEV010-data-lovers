@@ -1,51 +1,45 @@
-/* Recomendamos usar src/main.js para todo tu código que
-tenga que ver con mostrar los datos en la pantalla.
-Con esto nos referimos básicamente a la interacción con
-el DOM. Operaciones como creación de nodos, registro
-de manejadores de eventos (event listeners o event handlers) */
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
+import { filterRick,cardRandom,ordenA,buscador } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
-/* console.log(data.location); // de aquí sacamos los personajes
-const cartasrm = document.getElementById('cartasrm');
-cartasrm.innerHTML = data.location[0].name;
-console.log(document.getElementById('cartasrm'));  */
+//para los personajes
+const funFilRick = document.getElementById("personajesRm")
+const ricks = document.querySelector('.container');
+//para el personaje aleatorio
+const sorteo = document.querySelector("#myButton")
+const respSorteo = document.getElementById("cardsAleatorio")//div para mostrar el resultado de sorteo
+//para la ver perosnajes segun dimension
+const dimensiones = document.getElementById("dimension")
+//plantilla de cartas
+const dibujarPersonaje = function(personajes){
+  const cards = personajes.map(function(character) {
+    return `<div class="card">
+        <div class="imgBox">
+          <img src="${character.image}" alt="${character.name}">
+        </div>
+        <div class="content">
+          <h2>${character.name}</h2>
+          <p>
+            Status: ${character.status}<br>
+            Species: ${character.species}<br>
+            Type: ${character.type}<br>
+            Gender: ${character.gender}<br>
+            Origin: ${character.origin.name}<br>
+            Location: ${character.location.name}<br>
+            Episodes: ${character.episode.length}<br>
+          </p>
+        </div>
+      </div>`;
+  })
+    .join(""); //para unir las cadenas
 
-/* const container = document.querySelector('.container');
-for (let i = 0; i < data.results.length; i++) {
-  //console.log(data.results[i]);
-
-  container.innerHTML +=
-   `<div class="card">
-    <div class="imgBox">
-        <img src="${data.results[i].image}"
-          alt="${data.results[i].name}">
-    </div>
-    <div class="content">
-    <h2>${data.results[i].name}</h2>
-      <p>
-      ${data.results[i].status}
-      ${data.results[i].species}
-      ${data.results[i].type}
-      ${data.results[i].gender}
-      ${data.results[i].origin}
-      ${data.results[i].location}
-      ${data.results[i].episode}
-      </p>
-    </div>
-  </div>`
-} */
-
-/* const container = document.querySelector('.container');
-
-for (let i = 0; i < data.results.length; i++) {
-  const character = data.results[i];
-  // const originName = character.origin.name;
-
-  container.innerHTML +=
-    `<div class="card">
+  ricks.innerHTML = cards;
+};
+//botón de sorteo
+sorteo.addEventListener("click", function() {
+  const character = cardRandom(data);
+  ricks.innerHTML=""
+  const rickCard = `
+    <div class="card">
       <div class="imgBox">
         <img src="${character.image}" alt="${character.name}">
       </div>
@@ -61,35 +55,80 @@ for (let i = 0; i < data.results.length; i++) {
           Episodes: ${character.episode.length}<br>
         </p>
       </div>
-    </div>`;
-} */
+    </div>
+  `;
+  
+  respSorteo.innerHTML = rickCard; // Actualizar el contenido en el DOM
+});
 
-const ricks = document.querySelector('.container');
+funFilRick.addEventListener("change", function() {
+  respSorteo.innerHTML="";// se tiene que limpiar para que no cargue con el boton con las anteriores cartas del filtro
+  if (funFilRick.value === "rick") { 
+    const resultado = filterRick(data.results,'Rick'); //recomendacion utilizar funFilRick.value pero se podria realizar sin un if o else
+    //console.log (resultado);
+    dibujarPersonaje(resultado);
+  }
+  else if (funFilRick.value === "morty"){ //evalua morty en las opciones
+    const resultadoM = filterRick(data.results,'Morty');
+    dibujarPersonaje(resultadoM);
+  }
+  else if (funFilRick.value === "summer"){ //para evaluar summer
+    const resultadoS = filterRick(data.results,'Summer');
+    dibujarPersonaje(resultadoS);
+  }
+  else if (funFilRick.value === "beth"){ //para evaluar beth
+    const resultadoB = filterRick(data.results,'Beth');
+    dibujarPersonaje(resultadoB);
+  }
+  else if (funFilRick.value === "jerry"){ //para evaluar jerry
+    const resultadoJ = filterRick(data.results,'Jerry');
+    dibujarPersonaje(resultadoJ);
+  }
+  else if (funFilRick.value === "todo") {
+    const resultadoJ = filterRick(data.results,'');
+    dibujarPersonaje(resultadoJ);
+  /*const container = document.querySelector('.container');
+    data.results.forEach(function(character) {
+      container.innerHTML +=
+        `<div class="card">
+          <div class="imgBox">
+            <img src="${character.image}" alt="${character.name}">
+          </div>
+          <div class="content">
+            <h2>${character.name}</h2>
+            <p>
+              Status: ${character.status}<br>
+              Species: ${character.species}<br>
+              Type: ${character.type}<br>
+              Gender: ${character.gender}<br>
+              Origin: ${character.origin.name}<br>
+              Location: ${character.location.name}<br>
+              Episodes: ${character.episode.length}<br>
+            </p>
+          </div>
+        </div>`;
+    }); */
+  }
+});
 
-const rickCards = data.results
-  .filter(function(character) {
-    return character.name.includes("Rick");
-  })
-  .map(function(character) {
-    return `<div class="card">
-              <div class="imgBox">
-                <img src="${character.image}" alt="${character.name}">
-              </div>
-              <div class="content">
-                <h2>${character.name}</h2>
-                <p>
-                  Status: ${character.status}<br>
-                  Species: ${character.species}<br>
-                  Type: ${character.type}<br>
-                  Gender: ${character.gender}<br>
-                  Origin: ${character.origin.name}<br>
-                  Location: ${character.location.name}<br>
-                  Episodes: ${character.episode.length}<br>
-                </p>
-              </div>
-            </div>`;
-  })
-  .join(""); //para unir las cadenas
+//Para buscar por nombre
+dimensiones.addEventListener("input", function() {
+  respSorteo.innerHTML="";
+  const textMenor = buscador(dimensiones);
+  const resultadoFiltrado = filterRick(data.results, textMenor);
+  dibujarPersonaje(resultadoFiltrado);
+});
 
-ricks.innerHTML = rickCards;
+//para ordenar por los nombres
+const ordenar = document.querySelector('#ordenPersonajes');
+ordenar.addEventListener('change', function() {
+  if (ordenar.value === "az") {
+    const resultadOrden = ordenA(data, 'name');
+    dibujarPersonaje(resultadOrden);
+  } else if (ordenar.value === "za") {
+    const resultadOrden= ordenA(data, 'name');
+    const finalZ = resultadOrden.reverse();
+    dibujarPersonaje(finalZ);
+  }
+});
 

@@ -1,99 +1,61 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <h1>The portal of the characters of Rick and Morty</h1>
-  </header>
-  <nav>
-    <label for="personajes">Characters:</label>
-    <select id="personajes" required>
-      <option disabled selected value="">Select an option</option>
-      <optgroup label="PRINCIPALES">
-        <option value="rick">Rick</option>
-        <option value="morty">Morty</option>
-        <option value="summer">Summer</option>
-        <option value="beth">Beth</option>
-        <option value="jerry">Jerry</option>
-      </optgroup>
-      <optgroup label="GENERO">
-        <option value="femenino">Femenino</option>
-        <option value="masculino">Masculino</option>
-        <option value="otro_genero">Otros</option>
-      </optgroup>
-      <optgroup label="ESPECIE">
-        <option value="humano">Humano</option>
-        <option value="alien">Alien</option>
-        <option value="otra_especie">Otros</option>
-      </optgroup>
-      <optgroup label="ESTADO">
-        <option value="vivo">Vivo</option>
-        <option value="muerto">Muerto</option>
-      </optgroup>
-    </select>
-
-    <br>
-
-    <label for="temporadas">Seasons:</label>
-    <select id="temporadas" required>
-      <option disabled selected value="">Select an option</option>
-      <option value="tem1">Tem 1</option>
-      <option value="tem2">Tem 2</option>
-      <option value="tem3">Tem 3</option>
-      <option value="tem4">Tem 4</option>
-      <option value="tem5">Tem 5</option>
-      <option value="tem6">Tem 6</option>
-    </select>
-
-    <br>
-
-    <label for="ubicacion">Location:</label>
-    <select id="ubicacion" required>
-      <option disabled selected value="">Select an option</option>
-      <option value="tierra">Tierra</option>
-      <option value="otro_planeta">Otro planeta</option>
-    </select>
-
-    <br>
-
-    <label for="otros">Other:</label>
-    <select id="otros" required>
-      <option disabled selected value="">Select an option</option>
-      <option value="consejo_ricks">Concejo de los Ricks</option>
-      <option value="dimension_c137">Dimension C-137</option>
-    </select>
-  </nav>
-
-  <!-- efecto de carta -->
-   <h2 id="cartasrm"></h2> 
-  <div class="container">
-    <!--  <div class="card">
-      <div class="imgBox">
-        <figure>
-          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg"
-            alt="personaje de rick and morty">
-        </figure>
-      </div>
-      <div class="content">
-        <h2 id="cartasrm"></h2>
-        <P> informacion del personaje</P>
-      </div>
-    </div>  -->
-  </div>
-  <footer>
-    <h3>Autoras: Wara Karen, Maria Jose </h3>
-  </footer>
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
-</body>
-
+  <body>
+    <header class="tituloFrente">
+      <h1>Rick and Morty Character Portal</h1>
+    </header>
+    <nav>
+      <label class="menu" for="personajes">CHARACTERS:</label>
+      <select id="personajesRm" required>
+        <option hidden value="">Select an option</option>
+        <optgroup label="MAIN">
+          <option value="rick">Rick</option>
+          <option value="morty">Morty</option>
+          <option value="summer">Summer</option>
+          <option value="beth">Beth</option>
+          <option value="jerry">Jerry</option>
+          <option value="todo">All</option>
+        </optgroup>
+      </select>
+      <label class="menu" for="personajes">ORDER</label>
+      <select id="ordenPersonajes" required>
+        <option hidden value="">Select an option</option>
+        <optgroup label="FOR">
+          <option class="az" value="az">A - Z</option>
+          <option id="za" value="za">Z - A</option>
+        </optgroup>
+      </select>
+      <input class="menu" id="dimension" placeholder="SEARCH BY NAME" type="text" />
+      <button class="menu" id="myButton">
+        Your Rick and Morty Character
+      </button>
+    </nav>
+    <!-- efecto de carta -->
+    <h2 id="cartasrm"></h2>
+    <div class="container"></div><!--para las cartas por nombre -->
+    <div id="cardsAleatorio"></div><!--para las cartas aletorias-->
+    <footer>
+      <p> <strong>Wubba Lubba Dub Dub!</strong><br>
+        <br>Thanks for checking out this awesome dimension of Rick and Morty.
+        <br> hope you enjoy your journey through the multiverse.
+        <br>I am Wara Karen Pacajes Mamani, the author of this page.
+        <br><strong>Remember, focus on science, crazy science is the best science!</strong></p>
+    </footer>
+    
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>

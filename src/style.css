@@ -1,69 +1,73 @@
 body {
-    background-color: #0a0a0a;
-    background-image: url('r&m/fondo.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+  background-image: url('r&m/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0px;
+  background-size: cover;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #F7E62B;
-    color: #0f0f0f;
-    height: 100px;
+
+.tituloFrente {
+  background: #F7E62B;
+  border-radius: 50px;
+  text-align: center;
+  margin: 5px;
+  padding: 1px;
 }
 
-h1{
+h1 {
   color: #0a0a0a;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    background-color: #275a13;
-    color: rgb(42, 216, 42);
-    height: 80px;
-}
-nav {
   display: flex;
-  flex-direction:row; /* Alinear elementos  */
-  align-items: center; /* Centrar horizontalmente el contenido */
-  gap: 10px; /* Espacio entre elementos */
-  margin-top: 20px; /* Margen superior */
-  color:blue;
+  justify-content: center;
+  align-items: center;
+  background-color: #8ffd00b0;
+  height: 150px;
+  text-align: center;
+  margin-top: 70px;
 }
 
+nav {
+  background-color: #8ffd00b0;
+  padding: 0.5em 5%;
+}
 
 * {
-    font-family: 'Orbitron', sans-serif;
-    color:#F7E62B
-
+  font-family: 'Orbitron', sans-serif;
+  color: #0f0f0f;
 }
-  .container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px; /* Espacio entre elementos */
-    text-align: center; 
-    margin: 30px 100px 30px 200px;
-  }
-  .card{
-    position: relative;
-    left: -6%;
-    width: 300px;
-    height: 370px;
-    transition: 0.3s ease-out;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
-  }
-  .card .imgBox{
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  /* Espacio entre elementos */
+  text-align: center;
+  margin: 10px 10px 10px 140px;
+  justify-content: space-around;
+}
+
+.card {
+  position: relative;
+  left: -6%;
+  width: 300px;
+  height: 370px;
+  transition: 0.3s ease-out;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+}
+
+.card .imgBox {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  }
-  .card .imgBox img{
+}
+
+.card .imgBox img {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,8 +75,9 @@ nav {
   height: 80%;
   display: block;
   transition: 0.5s;
-  }
-  .card .content{
+}
+
+.card .content {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -83,30 +88,99 @@ nav {
   transition: all 0.5s cubic-bezier(.48, -0.28, 0.41, 1.4);
   box-sizing: border-box;
   overflow: hidden;
-  }
-  .card:hover .content{
-    width: 100%;
-    height: 75%;
-    left: 0;
-    bottom: 0;
-  }
-  .content p{
-    margin: 10px 0 0;
-    padding: 1em 1em;
-    transform: translateY(2em);
-    line-height: 1.3em;
-    transition: 0,3s;
-    text-align: justify;
-    opacity: 0;
-  }
-  .card:hover .content p{
+  font-size: 15px;
+  /* Tamaño de fuente deseado */
+}
+
+.card:hover .content {
+  width: 100%;
+  height: 75%;
+  left: 0;
+  bottom: 0;
+}
+
+.content p {
+  margin: 5px 0 0;
+  padding: 1em 1em;
+  transform: translateY(2em);
+  line-height: 1.3em;
+  transition: 0, 3s;
+  text-align: justify;
+  opacity: 0;
+  color: #275a13;
+}
+
+.card:hover .content p {
   transform: translateY(0);
   opacity: 1;
-  }
-  h2{
+}
+
+h2 {
   text-align: center;
-  }
-  .card:hover{
+  color: #0f0f0f;
+}
+
+.card:hover {
   box-shadow: 0 0 5em rgba(0, 0, 0, 0.4);
+}
+
+#cardsAleatorio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 10px 10px 150px;
+}
+
+#myButton {
+  background-color: #f0c911;
+  border-radius: 25px;
+  border: 1px solid #e65f44;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 10px;
+  text-decoration: none;
+}
+
+#myButton:hover {
+  background-color: #f2ab1e;
+}
+
+/*responsivo*/
+@media only screen and (max-width:1055px) {
+  nav {
+    display: grid;
+    padding: 10px;
   }
-  
+
+  .tituloFrente {
+    display: grid;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 10px 10px 55px;
+  }
+
+  #myButton {
+    margin: 5px;
+  }
+
+  .menu {
+    margin: 5px;
+  }
+
+  #cardsAleatorio {
+    margin: 10px 10px 10px 55px;
+  }
+
+  footer {
+    margin-top: 20px;
+    height: 210px;
+    text-align: center;
+  }
+}
