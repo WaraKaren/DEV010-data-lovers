@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,9 +19,10 @@
       <h1>Rick and Morty Character Portal</h1>
     </header>
     <nav>
-      <label class="menu" for="personajes">CHARACTERS:</label>
-      <select id="personajesRm" required>
-        <option hidden value="">Select an option</option>
+      <label class="menu">CHARACTERS:</label>
+      <select id="personajesRm">
+        <option hidden>Select an option</option>
+        <!-- HIDDEN no muestra seleccione una opcion -->
         <optgroup label="MAIN">
           <option value="rick">Rick</option>
           <option value="morty">Morty</option>
@@ -30,32 +32,42 @@
           <option value="todo">All</option>
         </optgroup>
       </select>
-      <label class="menu" for="personajes">ORDER</label>
-      <select id="ordenPersonajes" required>
-        <option hidden value="">Select an option</option>
+      <label class="menu">ORDER</label>
+      <select id="ordenPersonajes">
+        <option hidden>Select an option</option>
+        <!-- HIDDEN no muestra seleccione una opcion -->
         <optgroup label="FOR">
           <option class="az" value="az">A - Z</option>
           <option id="za" value="za">Z - A</option>
         </optgroup>
       </select>
-      <input class="menu" id="dimension" placeholder="SEARCH BY NAME" type="text" />
-      <button class="menu" id="myButton">
-        Your Rick and Morty Character
-      </button>
+      <input
+        class="menu"
+        id="dimension"
+        placeholder="SEARCH BY NAME"
+        type="text"
+      />
+      <button class="menu" id="myButton">Your Rick and Morty Character</button>
     </nav>
     <!-- efecto de carta -->
-    <h2 id="cartasrm"></h2>
-    <div class="container"></div><!--para las cartas por nombre -->
-    <div id="cardsAleatorio"></div><!--para las cartas aletorias-->
+
+    <div class="container"></div>
+    <!--para las cartas por nombre -->
+    <div id="cardsAleatorio"></div>
+    <!--para las cartas aletorias-->
     <footer>
-      <p> <strong>Wubba Lubba Dub Dub!</strong><br>
-        <br>Thanks for checking out this awesome dimension of Rick and Morty.
-        <br> hope you enjoy your journey through the multiverse.
-        <br>I am Wara Karen Pacajes Mamani, the author of this page.
-        <br><strong>Remember, focus on science, crazy science is the best science!</strong></p>
+      <p>
+        <strong>Wubba Lubba Dub Dub!</strong><br />
+        <br />Thanks for checking out this awesome dimension of Rick and Morty.
+        <br />
+        hope you enjoy your journey through the multiverse. <br />I am Wara
+        Karen Pacajes Mamani, the author of this page. <br /><strong
+          >Remember, focus on science, crazy science is the best
+          science!</strong
+        >
+      </p>
     </footer>
-    
-    <div id="root"></div>
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
